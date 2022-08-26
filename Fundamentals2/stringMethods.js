@@ -71,18 +71,47 @@ The first method is strString.indexOf(substr, pos).
 There are multiple ways to look for a substring within a string
 */
 
-// strString.indexof
+// strString.indexof(substr, pos)
 /* It looks for the substr in str, starting from the given position "pos", and returns the position 
 where the match was found or -1 if nothing can be found
+ - must used the exact word because it's case-sensitive
 */
 
 console.log("\nIndexOf");
-let strString = "Gwapo ko si Christian";
+let strString = "Gwapo si Christian, Gwapo Kaau";
 let selectIndexOf = strString.indexOf("Gwapo"); // 0, since the word "Gwapo" is found in the beginning
 selectIndexOf = strString.indexOf("Christian"); // 12, by counting each character that starts from 0
 
-selectIndexOf = strString.indexOf("Christian", 2);
+/*  9, it means the second parameter gives us the idea of the substring position 
+or the second parameter allows us to start searching from a given position
+*/
+selectIndexOf = strString.indexOf("Christian", 1);
 console.log(selectIndexOf);
+
+/* Getting all occurrences (finding the each positions of all of its word match), 
+we can run indexOf in a loop. Every new call is made with the position */
+
+strString = "As sly as a fox, as strong as an ox";
+let target = "as";
+
+let pos = 0;
+while (true) {
+	let foundPos = strString.indexOf(target, pos);
+	if (foundPos == -1) break;
+
+	console.log(`Found at ${foundPos}`);
+	pos = foundPos + 1;
+}
+
+// Similar method  that search from the end of the string to its beginning
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+const paragraph = "Learning Javascript as of August 26, 2022";
+const searchTerm = "Javascript";
+console.log(
+	`The index of the first "${searchTerm}" from the end is ${paragraph.lastIndexOf(
+		searchTerm
+	)}`
+);
 
 // Replace String Content
 // The replace() method replaces a specified value with another value in a string that has the same word on it
