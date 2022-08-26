@@ -305,21 +305,21 @@ splitText = "a b c d e f"; // split on spaces
 splitText = "a | b | c | d | e | f"; // split on pipe
 
 const myArray = splitText.split("|");
-splitText = "";
-// console.log(myArray[3]);
+console.log(myArray[3]);
 // let padSplit = splitText.padStart(1, " ");
 
-for (let i = 0; i < myArray.length; i++) {
-	splitText += myArray[i] + "\n".padEnd(4, " ");
-}
-console.log(splitText);
+// for (let i = 0; i < myArray.length; i++) {
+// 	splitText += myArray[i] + "\n".padEnd(4, " ");
+// }
+// console.log(splitText);
 
 // Other example
 let textH = "Hello";
 const myArr = textH.split("");
 
-textH = "";
+textH = ""; // Make textH an empty string before the for loop
 for (let i = 0; i < myArr.length; i++) {
-	textH += myArr[i] + "\n";
+	// Use the textH an empty string added or returning the split of the word "Hello" with a break line
+	textH += myArr[i] + " \n";
 }
 console.log(textH);
