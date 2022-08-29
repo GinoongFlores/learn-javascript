@@ -43,7 +43,7 @@ substring() method and the slice() method are the same in terms of:
  
 Differences of the slice() method that will not work on the substring() method: 
  - If startIndex is a negative number, then the counting starts from the end of the string (reverse)
- - If startIndex > (greater than) endIndex 
+ - If startIndex > (greater than) endIndex (It allows startIndex to be greater than end)
 
 */
 console.log("\nString substring()");
@@ -59,9 +59,26 @@ console.log(part);
 // console.log("\nString substr()");
 console.log("");
 
+/* 
+	Substring 
+   - If the startIndex and the endIndex are greater than the length of string, then it will return an empty string. But not for substring()
+   - Negative arguments will not work, they are treated as 0. 
+*/
+
+// This will not work due to both arguments are negative
+console.log("substring() method = " + fruits.substring(-13, -7));
+
+// This will work but starts from the beginning
+// console.log("substring() method = " + fruits.substring(-13, 13));
+
 console.log("substring() method = " + fruits.substring(7, 13));
 console.log("slice() method = " + fruits.slice(7, 13));
 console.log("substr() method = " + fruits.substr(7));
+
+/* Note: 
+	- Getting a character of strings will not change the original set of strings 
+	- slice() method is a little bit more flexible, it allows negative arguments and shorter to write
+*/
 
 // Note: Getting a character of strings will not change the original set of strings
 
@@ -112,6 +129,26 @@ console.log(
 		searchTerm
 	)}`
 );
+
+// The bitwise NOT trick (legacy code)
+/* It converts the number to a 32-bit integer (remove the decimal part if exists) and then reverse all bits in its binary representation. */
+console.log("bitwise");
+console.log(~2); // the same as -(2 + 1)
+console.log(~1); // the same as -(1 + 1)
+console.log(~0); // the same as -(0 + 1)
+console.log(~-1); // the same as -(1 + 1)
+
+// includes, startsWith, endsWith
+console.log("\nincludes, startsWith, endsWith");
+console.log("Gwapo daw ko".includes("Gwapo"));
+
+// optional argument of str.includes is the position to start
+console.log("Gwapo daw ko".includes("Gwapo", 3)); // false, there is no "Gwapo" word on position 3
+
+// The methods, str.startsWith and str.endsWIth do exactly what they say
+console.log("\nstartsWith() & endsWith() methods");
+console.log("Gwapo".startsWith("Gwa"));
+console.log("Gwapo".endsWith("po"));
 
 // Replace String Content
 // The replace() method replaces a specified value with another value in a string that has the same word on it
@@ -239,9 +276,9 @@ const myArr = textH.split("");
 
 textH = ""; // Make textH an empty string before the for loop
 for (let i = 0; i < myArr.length; i++) {
-	// Use the textH an empty string added or returning the split of the word "Hello" with a break line
+	// Use the textH variable an empty string that returns the split of the word "Hello" with a break line
 	textH += myArr[i] + " \n";
 }
-console.log(textH);
+console.log(textH);;
 
 console.log("\u{00A9}");
