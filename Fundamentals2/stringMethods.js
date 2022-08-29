@@ -80,7 +80,6 @@ console.log("substr() method = " + fruits.substr(7));
 	- slice() method is a little bit more flexible, it allows negative arguments and shorter to write
 */
 
-// Note: Getting a character of strings will not change the original set of strings
 
 /*  Searching for a substring
 
