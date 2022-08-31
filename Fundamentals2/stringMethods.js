@@ -80,6 +80,34 @@ console.log("substr() method = " + fruits.substr(7));
 	- slice() method is a little bit more flexible, it allows negative arguments and shorter to write
 */
 
+/* Comparing strings 
+  - A lowercase letter is always greater than the uppercase
+  - Characters are compared by its numeric code
+*/
+console.log("\nComparing strings")
+console.log("a" > "Z"); // true
+
+// Letters with diacritical marks are "out of order"
+console.log('Österreich' > 'Zealand'); // true
+
+// To understand what happens, lets use the codeAtPoint() method to know the corresponding value of a string 
+console.log("a".codePointAt(0)); // 97
+console.log("Z".codePointAt(0)); // 90
+
+// Creates a character by its numeric code
+console.log(String.fromCodePoint(90));
+
+// * Adding a Unicode characters by their codes using \u followed by the hex code
+console.log("\u{00A9}");
+
+// * The character with codes 65.220 (the latin alphabet and a little bit extra) by making a string of them:
+let str = '';
+for (let i = 65; i <= 220; i++) {
+	str += String.fromCodePoint(i);
+}
+
+console.log(str);
+
 
 /*  Searching for a substring
 
@@ -280,4 +308,3 @@ for (let i = 0; i < myArr.length; i++) {
 }
 console.log(textH);;
 
-console.log("\u{00A9}");
