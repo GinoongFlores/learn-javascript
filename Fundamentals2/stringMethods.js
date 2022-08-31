@@ -95,7 +95,7 @@ console.log("a".codePointAt(0)); // 97
 console.log("Z".codePointAt(0)); // 90
 
 // Creates a character by its numeric code
-console.log(String.fromCodePoint(90));
+console.log(String.fromCodePoint(90)); // Z
 
 // * Adding a Unicode characters by their codes using \u followed by the hex code
 console.log("\u{00A9}");
