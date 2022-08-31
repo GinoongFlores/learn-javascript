@@ -75,7 +75,7 @@ console.log(typeof true); // boolean
 console.log(typeof "foo"); // string
 console.log(Symbol("id")); // symbol
 console.log(typeof Math); // object
-console.log(typeof null); // object (null expresses a lack of identification, indicating that a variable points to no object)
+console.log(typeof null); // object (this is an error in the language as null is actually an object)
 console.log(typeof alert); // function(inside the browser) and undefined(outside the browser or using NodeJS)
 
 // Strings
@@ -112,8 +112,9 @@ const score = 9;
 const highestScore = 10;
 // Example of an template literal with an string {interpolation} method
 // Automatic replacing of variables with real values is called string interpolation
-const output = `I like the song ${song}. I gave it a score of ${(score / highestScore) * 100
-	}%`;
+const output = `I like the song ${song}. I gave it a score of ${
+	(score / highestScore) * 100
+}%`;
 console.log(output);
 
 // In a template literal, we can use a double quote inside a string or use both single and double quotes
