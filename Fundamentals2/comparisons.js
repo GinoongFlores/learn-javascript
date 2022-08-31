@@ -1,6 +1,5 @@
 /* 
     * Comparisons 
-
     * reference: https://javascript.info/comparison
 */
 
@@ -17,7 +16,6 @@ console.log("\nComparison of different types");
 /* 
  * Comparison of different types 
  * When comparing different types, Javascript converts the value to numbers
-
 */
 
 console.log("2" > 1); // * true, string "2", becomes a number 2
@@ -39,10 +37,8 @@ console.log('' == false); // true
 /* 
     * This happens because operands of different types are converted to numbers by the equality operator == 
     * An empty string, just like false, becomes a 0. 
-
     * A strick equality operator === checks the equality without type conversion
     * In other words, if a and b are of different types, then a === b immediately return false without an attempt to convert them.
-
 */
 console.log(0 === false); // false
 
@@ -51,7 +47,6 @@ console.log("\nComparison with null and undefined");
     * Comparison with null and undefined 
     * null is an assignment value. It can be assigned to a variable as a representation of no value
     * undefined is a variable that has been declared but has not yet assigned or have a value
-
     * For a strick equality check === 
     * These values are different, because each of them is a different type
 */
@@ -85,7 +80,6 @@ console.log(undefined < 0); // (2) false
 console.log(undefined == 0); // (3) false
 /* 
     * We get the results because: 
-
     * Comparisons (1) and (2) return false because undefine gets converted to NaN and Nan is a special numeric value which returns false for all comparisons.
     * The equality check (3) returns false because undefine only equals null, undefined, and no other value. 
 */
