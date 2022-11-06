@@ -196,7 +196,7 @@ console.log(newText);
 // Converting to Upper and Lower Case
 console.log("\n Upper and Lower Case");
 let upperText = "Hello World";
-let upper = upperText.toUpperCase();
+let upper = upperText.toUpperCase().split(" "); // split turns the string into an array
 console.log(upper);
 
 let lowerText = "Hello World";
