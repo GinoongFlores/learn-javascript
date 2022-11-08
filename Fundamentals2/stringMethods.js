@@ -199,6 +199,9 @@ let upperText = "Hello World";
 let upper = upperText.toUpperCase().split(" "); // split turns the string into an array
 console.log(upper);
 
+const ndxf = upper.indexOf("WORLD");
+console.log(ndxf);
+
 let lowerText = "Hello World";
 let lower = lowerText.toLowerCase();
 console.log(lower);
