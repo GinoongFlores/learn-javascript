@@ -309,5 +309,5 @@ for (let i = 0; i < myArr.length; i++) {
 	// Use the textH variable an empty string that returns the split of the word "Hello" with a break line
 	textH += myArr[i] + " \n";
 }
-console.log(textH);;
+console.log(textH);
 
